@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl">
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#acceptedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#acceptedBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#assignedTo -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#assignedTo">
+        <owl:inverseOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isAssignedTo"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#declinedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#declinedBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#executedBy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#executedBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#executedOn -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#executedOn">
+        <owl:inverseOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isExecutedOn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasConsentedFor -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasConsentedFor">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasConsentedForTask -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasConsentedForTask">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasCurrentTask -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasCurrentTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasReason -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasReason">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasTODOTasks -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasTODOTasks">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isAssignedTo -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isAssignedTo"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isExecutedOn -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isExecutedOn"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isIdeallyPerformedAtLocation -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isIdeallyPerformedAtLocation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isInNeedOfCompetence -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isInNeedOfCompetence">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#madeAtTime -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#madeAtTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#AnswerNeeded -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#AnswerNeeded">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasMinimalInterventionTime -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasMinimalInterventionTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasTimeOutTime -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#hasTimeOutTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#ActualTask -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#ActualTask">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#CareReason -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#CareReason">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#DoctorNeededReason -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#DoctorNeededReason">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#MedicalReason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#HotelFunctionReason -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#HotelFunctionReason">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#MedicalReason -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#MedicalReason">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NewOrActiveOrAssignedAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NewOrActiveOrAssignedAction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                        <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Active"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                        <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Assigned"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                        <owl:hasValue rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#New"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Notification">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NotificationStatus -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NotificationStatus">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PainReason -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PainReason">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#CareReason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PatientInfoRequest -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PatientInfoRequest">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PatientVisit -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PatientVisit">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PlannedTask -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PlannedTask">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#ActualTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PotentialTask -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PotentialTask">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Reason">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request">
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Task">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#ActualTask"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#PotentialTask"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Task"/>
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasStatus"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#isInNeedOfCompetence"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#Competence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#hasPriority"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#PriorityLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#madeAtTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskInfoRequest -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskInfoRequest">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#UnplannedTask -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#UnplannedTask">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#ActualTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Visit">
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Accepted -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Accepted">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Active -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Active">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NotificationStatus"/>
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Assigned -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Assigned">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Busy -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Busy">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Declined -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Declined">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Finished -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Finished">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#NotificationStatus"/>
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#New -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#New">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Pending -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Pending">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Redirected -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Redirected">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#Request">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TemporarilyAccepted -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TemporarilyAccepted">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#TaskStatus"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

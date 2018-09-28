@@ -1,0 +1,600 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:PersonalizedRobotics="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns2="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:DUL1="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:Wonder="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:demlab="http://www.demcare.eu/ontologies/demlab.owl#"
+     xmlns:PersonProfileAccio="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:SSNiot="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#"
+     xmlns:General="http://IBCNServices.github.io/Accio-Ontology/General.owl#"
+     xmlns:tbcgeo="http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#"
+     xmlns:Dementia="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#AggressionDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#AggressionDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Aggression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Chess -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Chess">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/TopicalConcept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#CircularWanderingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#CircularWanderingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#CircularWandering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ClinicalRecordPatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ClinicalRecordPatient1">
+        <rdf:type rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#ClinicalRecord"/>
+        <demlab:containsAssessment rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#DiagnosisAssessmentPatient1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ClinicalRecordPatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ClinicalRecordPatient2">
+        <rdf:type rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#ClinicalRecord"/>
+        <demlab:containsAssessment rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#DiagnosisAssessmentPatient2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ConversationTopicPreferencePatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ConversationTopicPreferencePatient1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#ConversationTopicPreference"/>
+        <PersonProfileAccio:hasPreferredTopic rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Chess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ConversationTopicPreferencePatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ConversationTopicPreferencePatient2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#ConversationTopicPreference"/>
+        <PersonProfileAccio:hasPreferredTopic rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#DiagnosisAssessmentPatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#DiagnosisAssessmentPatient1">
+        <rdf:type rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#DiagnosisAssessment"/>
+        <demlab:hasClinicalDiagnosis rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#dementia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#DiagnosisAssessmentPatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#DiagnosisAssessmentPatient2">
+        <rdf:type rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#DiagnosisAssessment"/>
+        <demlab:hasClinicalDiagnosis rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#dementia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Dutch -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Dutch">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SpokenLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#English -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#English">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SpokenLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#EscapingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#EscapingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Escaping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#FemaleGender -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#FemaleGender">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#GeneralConversationAction -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#GeneralConversationAction">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#ConversationAction"/>
+        <DUL1:hasParameter rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#GeneralTellStoryAction -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#GeneralTellStoryAction">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#TellStoryAction"/>
+        <DUL1:hasParameter rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#story"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#IDPatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#IDPatient1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#ID"/>
+        <General:hasID>ID123468</General:hasID>
+        <General:hasIDType>wonderID</General:hasIDType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#IDPatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#IDPatient2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#ID"/>
+        <General:hasID>ID789876</General:hasID>
+        <General:hasIDType>wonderID</General:hasIDType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LingeringAtExitsDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LingeringAtExitsDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#LingeringAtExits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteraturePreferencePatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteraturePreferencePatient1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <PersonProfileAccio:hasPreferredLiteratureGenre rdf:resource="http://dbpedia.org/page/Crime_fiction"/>
+        <PersonProfileAccio:hasPreferredLiteratureLanguage rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#English"/>
+        <PersonProfileAccio:hasPreferredWriter rdf:resource="http://dbpedia.org/page/Stephen_King"/>
+        <PersonProfileAccio:hasPreferredWrittenWork rdf:resource="http://dbpedia.org/page/Misery_(novel)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteraturePreferencePatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteraturePreferencePatient2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <PersonProfileAccio:hasPreferredLiteratureGenre rdf:resource="http://live.dbpedia.org/page/Horror_and_terror"/>
+        <PersonProfileAccio:hasPreferredLiteratureLanguage rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#English"/>
+        <PersonProfileAccio:hasPreferredWriter rdf:resource="http://live.dbpedia.org/page/Roald_Dahl"/>
+        <PersonProfileAccio:hasPreferredWrittenWork rdf:resource="http://live.dbpedia.org/page/Charlie_and_the_Chocolate_Factory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteratureTopicPref -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteratureTopicPref">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LongYellingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LongYellingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#LongYelling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#MaleGender -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#MaleGender">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#MusicalTopicPref -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#MusicalTopicPref">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PacingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PacingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Pacing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PreferredRobotInteractionsPatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PreferredRobotInteractionsPatient1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#PreferredRobotInteractions"/>
+        <SSNiot:requiresAction rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#generalPlaySongAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PreferredRobotInteractionsPatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PreferredRobotInteractionsPatient2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#PreferredRobotInteractions"/>
+        <SSNiot:requiresAction rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#GeneralConversationAction"/>
+        <SSNiot:requiresAction rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#GeneralTellStoryAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PurposefulWanderingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PurposefulWanderingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#PurposefulWandering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#RandomWanderingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#RandomWanderingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#RandomWandering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ShortYellingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ShortYellingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#ShortYelling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#TrespassingDisturbance -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#TrespassingDisturbance">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Trespassing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Weather -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Weather">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/TopicalConcept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Zorabot1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Zorabot1">
+        <rdf:type rdf:resource="http://ias.cs.tum.edu/kb/knowrob.owl#Robot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#conversationTopicPref -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#conversationTopicPref">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#ConversationTopicPreference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#generalPlaySongAction -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#generalPlaySongAction">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#PlaySongAction"/>
+        <DUL1:hasParameter rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#musicalPreferencePatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#musicalPreferencePatient1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <PersonProfileAccio:hasPreferredBand rdf:resource="http://dbpedia.org/page/The_Beatles"/>
+        <PersonProfileAccio:hasPreferredMusicalArtist rdf:resource="http://dbpedia.org/page/John_Lennon"/>
+        <PersonProfileAccio:hasPreferredMusicalStyle rdf:resource="http://dbpedia.org/page/Pop_rock"/>
+        <PersonProfileAccio:hasPreferredSong rdf:resource="http://dbpedia.org/page/Hey_Jude"/>
+        <PersonProfileAccio:hasPreferredSongLanguage rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#English"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#musicalPreferencePatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#musicalPreferencePatient2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <PersonProfileAccio:hasPreferredBand rdf:resource="http://dbpedia.org/page/The_Rolling_Stones"/>
+        <PersonProfileAccio:hasPreferredMusicalArtist rdf:resource="http://dbpedia.org/page/Keith_Richards"/>
+        <PersonProfileAccio:hasPreferredMusicalStyle rdf:resource="http://dbpedia.org/page/Blues"/>
+        <PersonProfileAccio:hasPreferredSong rdf:resource="http://dbpedia.org/page/Paint_It_Black"/>
+        <PersonProfileAccio:hasPreferredSongLanguage rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#English"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#patientRole -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#patientRole">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#PatientRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#relationshipBetweenRobotAndPatient1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#relationshipBetweenRobotAndPatient1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#AggressiveRelationshipBetweenPersonAndRobot"/>
+        <PersonalizedRobotics:relationshipAssociatedWithPerson rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#testPerson1"/>
+        <PersonalizedRobotics:relationshipAssociatedWithRobot rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Zorabot1"/>
+        <PersonalizedRobotics:NrOfAggressiveInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</PersonalizedRobotics:NrOfAggressiveInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</PersonalizedRobotics:NrOfInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfNegativeInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</PersonalizedRobotics:NrOfNegativeInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfNeutralInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</PersonalizedRobotics:NrOfNeutralInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfPositiveInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</PersonalizedRobotics:NrOfPositiveInteractionsWithRobot>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#relationshipBetweenRobotAndPatient2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#relationshipBetweenRobotAndPatient2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#PositiveRelationshipBetweenPersonAndRobot"/>
+        <PersonalizedRobotics:relationshipAssociatedWithPerson rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#testPerson2"/>
+        <PersonalizedRobotics:relationshipAssociatedWithRobot rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Zorabot1"/>
+        <PersonalizedRobotics:NrOfAggressiveInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</PersonalizedRobotics:NrOfAggressiveInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</PersonalizedRobotics:NrOfInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfNegativeInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</PersonalizedRobotics:NrOfNegativeInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfNeutralInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</PersonalizedRobotics:NrOfNeutralInteractionsWithRobot>
+        <PersonalizedRobotics:NrOfPositiveInteractionsWithRobot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</PersonalizedRobotics:NrOfPositiveInteractionsWithRobot>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#song -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#song">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Parameter"/>
+        <PersonalizedRobotics:influencedBy rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#MusicalTopicPref"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#story -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#story">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Parameter"/>
+        <PersonalizedRobotics:influencedBy rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteratureTopicPref"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#testPerson1 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#testPerson1">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#NaturalPerson"/>
+        <Dementia:exhibitsBehavioralDisturbance rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LongYellingDisturbance"/>
+        <Dementia:exhibitsBehavioralDisturbance rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PacingDisturbance"/>
+        <General:hasId rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#IDPatient1"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ConversationTopicPreferencePatient1"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteraturePreferencePatient1"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PreferredRobotInteractionsPatient1"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#musicalPreferencePatient1"/>
+        <PersonProfileAccio:hasPsychologicalProfile rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Agressive"/>
+        <PersonProfileAccio:speaksLanguage rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Dutch"/>
+        <demlab:hasClinicalRecord rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ClinicalRecordPatient1"/>
+        <DUL:hasRole rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#patientRole"/>
+        <ns:hasGender rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#FemaleGender"/>
+        <General:hasName>Patient1</General:hasName>
+        <Wonder:isVisuallyImpaired rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Wonder:isVisuallyImpaired>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#testPerson2 -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#testPerson2">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#NaturalPerson"/>
+        <Dementia:exhibitsBehavioralDisturbance rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#CircularWanderingDisturbance"/>
+        <Dementia:exhibitsBehavioralDisturbance rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LongYellingDisturbance"/>
+        <General:hasId rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#IDPatient2"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ConversationTopicPreferencePatient2"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#LiteraturePreferencePatient2"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#PreferredRobotInteractionsPatient2"/>
+        <PersonProfileAccio:hasPreference rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#musicalPreferencePatient2"/>
+        <PersonProfileAccio:speaksLanguage rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#Dutch"/>
+        <demlab:hasClinicalRecord rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#ClinicalRecordPatient2"/>
+        <DUL:hasRole rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#patientRole"/>
+        <ns:hasGender rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#MaleGender"/>
+        <General:hasName>Patient2</General:hasName>
+        <Wonder:isVisuallyImpaired rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Wonder:isVisuallyImpaired>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#topic -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#topic">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Parameter"/>
+        <PersonalizedRobotics:influencedBy rdf:resource="http://IBCNServices.github.io/Accio-Ontology/WonderInstanceExamples.owl#conversationTopicPref"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Blues -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Blues">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Crime_fiction -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Crime_fiction">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/LiteraryGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Hey_Jude -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Hey_Jude">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/John_Lennon -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/John_Lennon">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalArtist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Keith_Richards -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Keith_Richards">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalArtist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Paint_It_Black -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Paint_It_Black">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Pop_rock -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Pop_rock">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Stephen_King -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Stephen_King">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/The_Beatles -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/The_Beatles">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/The_Rolling_Stones -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/The_Rolling_Stones">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/page/Misery_(novel) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Misery_(novel)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://live.dbpedia.org/page/Charlie_and_the_Chocolate_Factory -->
+
+    <owl:NamedIndividual rdf:about="http://live.dbpedia.org/page/Charlie_and_the_Chocolate_Factory">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://live.dbpedia.org/page/Horror_and_terror -->
+
+    <owl:NamedIndividual rdf:about="http://live.dbpedia.org/page/Horror_and_terror">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/LiteraryGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://live.dbpedia.org/page/Roald_Dahl -->
+
+    <owl:NamedIndividual rdf:about="http://live.dbpedia.org/page/Roald_Dahl">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

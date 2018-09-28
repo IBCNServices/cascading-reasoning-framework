@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:ontologies="http://IBCNServices.github.io/Accio-Ontology/ontologies/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl"/>
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#checkedInWith -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#checkedInWith">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BasicProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBiologicalProfile -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBiologicalProfile">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BiologicalProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasFaith -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasFaith">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasSociologicalProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Faith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasNationality -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasNationality">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasSociologicalProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Nationality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPersonalTelephone -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPersonalTelephone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreference -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreference">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBand -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBand">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Band"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBook -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBook">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureGenre -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureGenre">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/LiteraryGenre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureLanguage">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalArtist -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalArtist">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/MusicalArtist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalDecade -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalDecade">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/TimePeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalStyle -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalStyle">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredSong -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredSong">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Song"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredSongLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredSongLanguage">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredTopic -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredTopic">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#ConversationTopicPreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/TopicalConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWriter -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWriter">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProxy -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProxy">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPsychologicalProfile -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPsychologicalProfile">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasRiskProfile -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasRiskProfile">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#RiskProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasSociologicalProfile -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasSociologicalProfile">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasBasicProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SociologicalProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustRelationship">
+        <owl:inverseOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#isTrustRelationshipOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustRelationshipWith -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustRelationshipWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasWorkTelephone -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasWorkTelephone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#isTrustRelationshipOf -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#isTrustRelationshipOf"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#speaksLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#speaksLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasSociologicalProfile"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SpokenLanguage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#availableSince -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#availableSince">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferenceDegree -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferenceDegree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustDegree -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustDegree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Agressive -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Agressive">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BasicProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BasicProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BehavioralRiskProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BehavioralRiskProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#RiskProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BiologicalProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BiologicalProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BasicProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#ConversationTopicPreference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#ConversationTopicPreference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredTopic"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/TopicalConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Faith -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Faith">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SociologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#FamilyRelationship -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#FamilyRelationship">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Impatient -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Impatient">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#LiteraturePreference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureGenre"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/LiteraryGenre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredLiteratureLanguage"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWriter"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Writer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredWrittenWork"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Man -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Man">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasGender"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Male"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#NaturalPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MedicalRiskProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MedicalRiskProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#RiskProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MotherTongue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MotherTongue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SpokenLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#MusicalPreference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredBand"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Band"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalArtist"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/MusicalArtist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalDecade"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/TimePeriod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredMusicalStyle"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/MusicGenre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredSong"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Song"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferredSongLanguage"/>
+                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Nationality -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Nationality">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SociologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonStatus -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonStatus">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonalRelationship -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonalRelationship">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasPreferenceDegree"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PreferredInteraction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PreferredInteraction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Preference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BasicProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#RiskProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#RiskProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SociologicalProfile -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SociologicalProfile">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#BasicProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SpokenLanguage -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SpokenLanguage">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#SociologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Stressed -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Stressed">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Team -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Team">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TherapeuticRelationship -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TherapeuticRelationship">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#TrustRelationship">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustRelationshipWith"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#isTrustRelationshipOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#hasTrustDegree"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Vegetarian -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Vegetarian">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PsychologicalProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Woman -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Woman">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasGender"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Female"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#NaturalPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Agressive -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Agressive">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Agressive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Busy -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Busy">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Free -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Free">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Impatient -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Impatient">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Impatient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Stressed -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Stressed">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Stressed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Vegetarian -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Vegetarian">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#Vegetarian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#WithPatient -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#WithPatient">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#PersonStatus"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

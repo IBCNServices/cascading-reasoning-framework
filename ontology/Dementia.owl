@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:tbcgeo="http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl">
+        <owl:imports rdf:resource="http://www.demcare.eu/ontologies/demlab.owl/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#exhibitsBehavioralDisturbance -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#exhibitsBehavioralDisturbance">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Aggression -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Aggression">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#CircularWandering -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#CircularWandering">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Escaping -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Escaping">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#LingeringAtExits -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#LingeringAtExits">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#LongYelling -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#LongYelling">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Yelling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Pacing -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Pacing">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#PurposefulWandering -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#PurposefulWandering">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#RandomWandering -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#RandomWandering">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#ShortYelling -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#ShortYelling">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Yelling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Trespassing -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Trespassing">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Wandering">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Yelling -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#Yelling">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl#BehavioralDisturbance"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/Localization.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:DUL="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl">
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsCorridor -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsCorridor">
+        <rdfs:subPropertyOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsPassage"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Corridor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsPassage -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsPassage">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#ehContains"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsRoom -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#containsRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#ehContains"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasConnectionPart -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasConnectionPart"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasDirection -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasDirection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#TrafficDirection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasRestriction">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Connection"/>
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isConnectionFrom -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isConnectionFrom"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isConnectionTo -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isConnectionTo"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnDepartment">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnFloor -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnFloor">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isBaseFloor -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isBaseFloor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isIndoor -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isIndoor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOpen -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOpen">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Locked"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#AboveGroundFloor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#AboveGroundFloor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Avenue -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Avenue">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#BathRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#BathRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sanitary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#BedRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#BedRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sleeping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Bridge -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Bridge">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Cinema -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Cinema">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#City -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#City">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#ClassRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#ClassRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Teaching"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#CompanyBuilding -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#CompanyBuilding">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Connection -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Connection">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#SpaceRegion"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Corridor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Corridor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Country -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Country">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Crossroad -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Crossroad">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Department -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Department">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Distance -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Distance">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Door -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Door">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Entrance-Exit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Elevator -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Elevator">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#EmergencyVehicleSpace -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#EmergencyVehicleSpace">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Entrance-Exit -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Entrance-Exit">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#EvacuationExit -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#EvacuationExit">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PassageFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#FloorSection -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#FloorSection">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Function -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Function">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Gate -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Gate">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Entrance-Exit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#GroundFloor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#GroundFloor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Gym -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Gym">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Highway -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Highway">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Home -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Home">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Hospital -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Hospital">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Hotel -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Hotel">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#IndoorSpace -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#IndoorSpace">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isIndoor"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#InterventionEntrance -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#InterventionEntrance">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PassageFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Kitchen -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Laboratory -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Laboratory">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Living -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Living">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#LivingRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#LivingRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Locked -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Locked">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#MainInterventionEntrance -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#MainInterventionEntrance">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#InterventionEntrance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Meeting -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Meeting">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#NursingPost -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#NursingPost">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnDepartment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Department"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Office -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Office">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#OutdoorSpace -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#OutdoorSpace">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isIndoor"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PassageFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PassageFunction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientCare -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientCare">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PatientCare"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnDepartment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Department"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PlayRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#PlayRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Police -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Police">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#ResidentialUse -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#ResidentialUse">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RestRoom -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RestRoom">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sanitary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoadworksRestriction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoadworksRestriction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Roof -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Roof">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Room">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#isOnFloor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomCompartiment -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomCompartiment">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Route -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Route">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#SpaceRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sanitary -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sanitary">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#School -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#School">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Site -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Site">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SiteZone -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SiteZone">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SizeRestriction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SizeRestriction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sleeping -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Sleeping">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Space">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#SpaceRegion"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Stairs -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Stairs">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Street -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Street">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Teaching -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Teaching">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#RoomFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#TrafficDirection -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#TrafficDirection">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#PhysicalAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#TrafficRestriction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#TrafficRestriction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#UnderGroundFloor -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#UnderGroundFloor">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#University -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#University">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Wall -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Wall">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Passage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Ward -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Ward">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#FloorSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#WeightRestriction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#WeightRestriction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#SpaceRegionRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Window -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Window">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Localization.owl#Entrance-Exit"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

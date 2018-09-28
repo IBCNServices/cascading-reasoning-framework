@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#"
+     xml:base="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:tbcgeo="http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl">
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ContextAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Dementia.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl"/>
+        <owl:imports rdf:resource="http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#aboutPerson -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#aboutPerson">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendMessageAction"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#associatedRoboticAction -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#associatedRoboticAction">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#SendRoboticActionsInfornationReportAction"/>
+        <rdfs:range rdf:resource="http://ias.cs.tum.edu/kb/knowrob.owl#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasAssociatedPerson -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasAssociatedPerson">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#toPerson -->
+
+    <owl:ObjectProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#toPerson">
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendMessageAction"/>
+        <rdfs:range rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasInterventionResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasInterventionResponse">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#requestInterventionAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#isVisuallyImpaired -->
+
+    <owl:DatatypeProperty rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#isVisuallyImpaired">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#AggressionBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#AggressionBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#DetectedFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasAssociatedPerson"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#CaregiverInterventionSolution -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#CaregiverInterventionSolution">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#CircularWanderingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#CircularWanderingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EscapingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EscapingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightAssessment -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#FaultStatus -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#FaultStatus">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/General.owl#Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#LingeringAtExitsBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#LingeringAtExitsBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#LongYellingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#LongYellingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#YellingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#PacingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#PacingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#PurposefulWanderingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#PurposefulWanderingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RandomWanderingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RandomWanderingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticDistractionSolution -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticDistractionSolution">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSolution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticObservationSolution -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticObservationSolution">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSolution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSolution -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSolution">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSoothingSolution -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSoothingSolution">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#RoboticSolution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#SendRoboticActionsInfornationReportAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#SendRoboticActionsInfornationReportAction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendInformationMessageAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#associatedRoboticAction"/>
+                <owl:someValuesFrom rdf:resource="http://ias.cs.tum.edu/kb/knowrob.owl#Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#ShortYellingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#ShortYellingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#YellingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#TrespassingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#TrespassingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#VisuallyImpairedPerson -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#VisuallyImpairedPerson">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#hasClinicalRecord"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.demcare.eu/ontologies/demlab.owl#ClinicalRecord"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#containsAssessment"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightAssessment"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasDiagnosis"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Amblyopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Diplopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Hyperopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Myopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Presbyopia"/>
+                                                            <rdf:Description rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Strabismus"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#isVisuallyImpaired"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.demcare.eu/ontologies/demlab.owl#Participant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderWithPersonAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderWithPersonAction">
+        <rdfs:subClassOf rdf:resource="http://ias.cs.tum.edu/kb/knowrob.owl#PurposefulAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#associatedResponseOfPerson"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#PersonResponseToRobotAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#atLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://dbpedia.org/ontology/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#desiredDistanceBetweenRobotAndPerson"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#distanceBetweenRobotAndPerson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/PersonalizedRobotics.owl#forPerson"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#WanderingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#YellingBDDetectedFault -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#YellingBDDetectedFault">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#BehavioralDisturbanceDetectedFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#requestInterventionAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#requestInterventionAction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendMessageAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#hasInterventionResponse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendInformationMessageAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendInformationMessageAction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendMessageAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendMessageAction -->
+
+    <owl:Class rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#sendMessageAction">
+        <rdfs:subClassOf rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#aboutPerson"/>
+                <owl:allValuesFrom rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#toPerson"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Amblyopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Amblyopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Assign -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Assign">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#FaultStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#ClearVision -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#ClearVision">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Diplopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Diplopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Hyperopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Hyperopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Myopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Myopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#New -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#New">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#FaultStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Presbyopia -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Presbyopia">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Setup -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Setup">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#FaultStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Strabismus -->
+
+    <owl:NamedIndividual rdf:about="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#Strabismus">
+        <rdf:type rdf:resource="http://IBCNServices.github.io/Accio-Ontology/Wonder.owl#EyesightDiagnosisType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

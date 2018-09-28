@@ -1,0 +1,186 @@
+@prefix : <http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#> .
+@prefix uo: <http://IBCNServices.github.io/Accio-Ontology/ontologies/uo.owl#> .
+@prefix DUL: <http://IBCNServices.github.io/Accio-Ontology/ontologies/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix SSNiot: <http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl#> .
+@prefix ssnDUL: <http://IBCNServices.github.io/Accio-Ontology/ontologies/ssnDUL.owl#> .
+@prefix General: <http://IBCNServices.github.io/Accio-Ontology/General.owl#> .
+@prefix SAREFiot: <http://IBCNServices.github.io/Accio-Ontology/SAREFiot.owl#> .
+@prefix NurseCall: <http://IBCNServices.github.io/Accio-Ontology/NurseCall.owl#> .
+@prefix TaskAccio: <http://IBCNServices.github.io/Accio-Ontology/TaskAccio.owl#> .
+@prefix ContextAccio: <http://IBCNServices.github.io/Accio-Ontology/ContextAccio.owl#> .
+@prefix Localization: <http://IBCNServices.github.io/Accio-Ontology/Localization.owl#> .
+@prefix PersonProfileAccio: <http://IBCNServices.github.io/Accio-Ontology/PersonProfileAccio.owl#> .
+@prefix RoleCompetenceAccio: <http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl#> .
+@base <http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl> .
+
+<http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl> rdf:type owl:Ontology ;
+                                                                       owl:imports <http://IBCNServices.github.io/Accio-Ontology/SSNiot.owl> ,
+                                                                                   <http://IBCNServices.github.io/Accio-Ontology/RoleCompetenceAccio.owl> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#hasDiagnosis
+:hasDiagnosis rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf DUL:isDescribedBy ;
+              rdfs:domain DUL:Entity ;
+              rdfs:range DUL:Diagnosis .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#hasMedicalSymptom
+:hasMedicalSymptom rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf DUL:isDescribedBy ;
+                   rdfs:domain DUL:Diagnosis ;
+                   rdfs:range :MedicalSymptom .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#Concussion
+:Concussion rdf:type owl:Class ;
+            rdfs:subClassOf [ owl:intersectionOf ( DUL:Diagnosis
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasMedicalSymptom ;
+                                                     owl:someValuesFrom :SensitiveToLight
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasMedicalSymptom ;
+                                                     owl:someValuesFrom :SensitiveToSound
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#LightIntensityAboveThresholdFault
+:LightIntensityAboveThresholdFault rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty SSNiot:hasSymptom ;
+                                                                                owl:someValuesFrom :LightIntensityAboveThresholdSymptom
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> ;
+                                                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty SSNiot:isSubsystemOf ;
+                                                                                                     owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty DUL:hasLocation ;
+                                                                                                                          owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty DUL:isLocationOf ;
+                                                                                                                                               owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                                                                           owl:onProperty :hasDiagnosis ;
+                                                                                                                                                                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                                owl:onProperty :hasMedicalSymptom ;
+                                                                                                                                                                                                                owl:someValuesFrom :SensitiveToLight
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                         ]
+                                                                                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                                                                                           owl:onProperty DUL:hasRole ;
+                                                                                                                                                                                           owl:someValuesFrom RoleCompetenceAccio:PatientRole
+                                                                                                                                                                                         ]
+                                                                                                                                                                                       ) ;
+                                                                                                                                                                    rdf:type owl:Class
+                                                                                                                                                                  ]
+                                                                                                                                             ]
+                                                                                                                        ]
+                                                                                                   ]
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
+                                   rdfs:subClassOf SSNiot:DetectedFault .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#LightIntensityAboveThresholdSymptom
+:LightIntensityAboveThresholdSymptom rdf:type owl:Class ;
+                                     rdfs:subClassOf SSNiot:ThresholdSymptom .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#MedicalSymptom
+:MedicalSymptom rdf:type owl:Class ;
+                rdfs:subClassOf DUL:Description .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SensitiveToLight
+:SensitiveToLight rdf:type owl:Class ;
+                  rdfs:subClassOf :MedicalSymptom .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SensitiveToSound
+:SensitiveToSound rdf:type owl:Class ;
+                  rdfs:subClassOf :MedicalSymptom .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SoundAboveThresholdFault
+:SoundAboveThresholdFault rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty SSNiot:hasSymptom ;
+                                                                       owl:someValuesFrom :SoundAboveThresholdSymptom
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> ;
+                                                                       owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty SSNiot:isSubsystemOf ;
+                                                                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty DUL:hasLocation ;
+                                                                                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                      owl:onProperty DUL:isLocationOf ;
+                                                                                                                                      owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                                                                  owl:onProperty :hasDiagnosis ;
+                                                                                                                                                                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                       owl:onProperty :hasMedicalSymptom ;
+                                                                                                                                                                                                       owl:someValuesFrom :SensitiveToSound
+                                                                                                                                                                                                     ]
+                                                                                                                                                                                ]
+                                                                                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                                                                                  owl:onProperty DUL:hasRole ;
+                                                                                                                                                                                  owl:someValuesFrom RoleCompetenceAccio:PatientRole
+                                                                                                                                                                                ]
+                                                                                                                                                                              ) ;
+                                                                                                                                                           rdf:type owl:Class
+                                                                                                                                                         ]
+                                                                                                                                    ]
+                                                                                                               ]
+                                                                                          ]
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ;
+                          rdfs:subClassOf SSNiot:DetectedFault .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#SoundAboveThresholdSymptom
+:SoundAboveThresholdSymptom rdf:type owl:Class ;
+                            rdfs:subClassOf SSNiot:ThresholdSymptom .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#_Concussion
+:_Concussion rdf:type owl:NamedIndividual ,
+                      :Concussion ;
+             :hasMedicalSymptom :_SensitiveToLight ,
+                                :_SensitiveToSound .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#_SensitiveToLight
+:_SensitiveToLight rdf:type owl:NamedIndividual ,
+                            :SensitiveToLight .
+
+
+###  http://IBCNServices.github.io/Accio-Ontology/CareRoomMonitoring.owl#_SensitiveToSound
+:_SensitiveToSound rdf:type owl:NamedIndividual ,
+                            :SensitiveToSound .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
