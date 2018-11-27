@@ -2,7 +2,7 @@
 
 This repository contains all relevant additional data and information about the manuscript "Towards a Cascading Reasoning Framework to support Responsive Ambient-Intelligent Healthcare Interventions" by Mathias De Brouwer, Femke Ongenae, Pieter Bonte and Filip De Turck.
 
-This manuscript is currently under review for submission to the "[Wearable and Ambient Sensors for Healthcare and Wellness Applications 2018](https://www.mdpi.com/journal/sensors/special_issues/Wearable_2018)" Special Issue of the [Sensors](https://www.mdpi.com/journal/sensors) Journal. Currently, a major revision of the manuscript is being performed. The original manuscript is available in Preprints via [this link](https://www.preprints.org/manuscript/201809.0046/v1).
+This manuscript is published in the "[Wearable and Ambient Sensors for Healthcare and Wellness Applications 2018](https://www.mdpi.com/journal/sensors/special_issues/Wearable_2018)" Special Issue of the [Sensors](https://www.mdpi.com/journal/sensors) Journal. The manuscript is available via [this link](https://www.mdpi.com/1424-8220/18/10/3514).
 
 ## Continuous care ontology
 
